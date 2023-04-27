@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truth table</title>
+  </head>
+  <body>
+    <h1>Truth table</h1>
+    <select class="numberofip" name="numberofip" id="numip">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+    <div class="logicalinputs">
+      <!-- <select class="ip1" id="input1">
+        <option value="0">0</option>
+        <option value="1">1</option>
+      </select>
+      <select class="ip2" id="input2">
+        <option value="0">0</option>
+        <option value="1">1</option>
+      </select> -->
+    </div>
+    <select class="gtype" id="gateType">
+      <option value="and">AND</option>
+      <option value="or">OR</option>
+      <option value="xor">XOR</option>
+    </select>
+    <button class="btn" onclick="gateOutput()">Output</button>
+    <input class="op" id="output" />
+    <script src="./truth_table.js"></script>
+  </body>
+</html>

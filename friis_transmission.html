@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friis Transmission</title>
+</head>
+<body>
+    <h1>Friis transmission</h1>
+    <input type="number" id="Pt" placeholder="Pt" />
+    <input type="number" id="Gt" placeholder="Gt" />
+    <input type="number" id="Gr" placeholder="Gr" />
+    <input type="number" id="distance" placeholder="distance" />
+    <br>
+    <br>
+    <select title="selector" name="selector" id="selector">
+        <option value="freq" selected>frequency</option>
+        <option value="lamb">lambda</option>
+    </select>
+    <input type="number" id="frequency" placeholder="frequency" />
+    <input type="number" id="lambda" placeholder="lambda" />
+    <br>
+    <br>
+    <button type="submit" onclick="calc()" id="calculate">calulate</button>
+    <input type="number" id="answer" placeholder="output" readonly />
+</body>
+<script src="./friis_transmission.js"></script>
+</html>
