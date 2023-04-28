@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/introjs.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/intro.js"></script>
+
     <title>Friis Transmission</title>
 </head>
+
+<style>
+.customTooltip *{
+  color: #006d0b;
+  font-size: 18px;
+  /* background-color: #3e3e3e; */
+}
+
+.customTooltip .introjs-tooltip-title {
+  color: #ff1313;
+}
+</style>
+
 <body>
     <h1>Friis transmission</h1>
     <input type="number" id="Pt" placeholder="Pt" />
@@ -17,7 +33,7 @@
     <br>
     <select title="selector" name="selector" id="selector">
         <option value="none" >select option...</option>
-        <option value="freq" >frequency</option>
+        <option value="freq" id="f">frequency</option>
         <option value="lamb">lambda</option>
     </select>
     <input type="number" id="frequency" placeholder="frequency" disabled="true"/>
@@ -37,6 +53,8 @@
     <div class="mychartclass" style="width: 500px">
       <canvas id="myChart2"></canvas>
     </div>
-</body>
-<script src="./friis_transmission.js"></script>
+    
+    <script src="./friis_transmission.js"></script>
+  </body>
+    
 </html>

@@ -187,3 +187,39 @@ function calc() {
     actions
   );
 }
+
+introJs().setOptions({
+  steps:[{
+    title:'Welcome learner',
+    intro:'Lets begin with the tutorial for Friis transmission lab.',
+    },{
+    element:document.getElementById('Pt'),
+    intro:"Here you need to enter integer value of power transmitted (watt/m2).",
+    },
+    {
+      element:document.getElementById('Gt'),
+      intro:"Here you need to enter integer value of the constant gain in transmissiting power.",
+    },
+    {
+        element:document.getElementById('Gr'),
+        intro:"Here you need to enter integer value of constant gain in receiving power.",
+        },
+    {
+      element:document.getElementById('distance'),
+      intro:"Here you need to enter integer value of distance (m).",
+    },
+    {
+      element:document.getElementById('selector'),
+      intro:"Here you need to select your input option between lambda and frequency then enter the corresponding value into the respective input space.",
+      datascrollto:document.getElementById("f"),
+    },
+    {
+      element:document.getElementById('calculate'),
+      intro:"Click on this button to get the transmitting power value in watt/m2 along with Pt vs time graph and Pr vs time graph. ",
+    },
+  
+  ],
+    dontShowAgain:true,
+    showProgress:true,
+    tooltipClass: 'customTooltip'
+  }).start();
