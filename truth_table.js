@@ -43,6 +43,20 @@ function gateOutput() {
       for (let i = 1; i < ips.length; i++) {
         out ^= ips[i];
       }
+    case "xnor":
+      out = ips[0];
+      for (let i = 1; i < ips.length; i++) {
+        out ^= ips[i];
+        if (out == 1) out = 0;
+        else out = 1;
+      }
+    case "nand":
+      out = ips[0];
+      for (let i = 1; i < ips.length; i++) {
+        out &= ips[i];
+        if (out == 1) out = 0;
+        else out = 1;
+      }
   }
 
   document.getElementById("output").value = out;

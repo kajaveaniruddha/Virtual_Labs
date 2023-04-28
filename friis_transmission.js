@@ -48,7 +48,6 @@ function calc() {
   console.log(output);
 
   // graph 1
-  const ctx = document.getElementById("myChart");
   let cosdata = [];
   let ydata = [];
   var amplitude = Math.sqrt(Pt);
@@ -58,63 +57,133 @@ function calc() {
     ydata.push(temp.toFixed(2));
   }
 
-  const labels = ydata;
-  const data = {
-    labels,
+  const data1 = {
+    labels: ydata,
     datasets: [
       {
+        label: "Wave",
         data: cosdata,
-        label: "Pt v/s time",
-        // fill:true,
-        tension: 0.35,
+        tension: 0.4,
+        fill: false,
+        stepped: false,
       },
     ],
   };
 
-  const config = {
+  const config1 = {
     type: "line",
-    data: data,
+    data: data1,
     options: {
-      radius: 0,
       responsive: true,
+      interaction: {
+        intersect: false,
+        axis: "x",
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: (ctx) =>
+            "Pt vs time",
+        },
+      },
     },
   };
 
-  const myChart = new Chart(ctx, config);
+  const actions = [
+    {
+      name: "Step: false (default)",
+      handler: (chart) => {
+        chart.data.datasets.forEach((dataset) => {
+          dataset.stepped = false;
+        });
+        chart.update();
+      },
+    },
+    {
+      name: "Step: true",
+      handler: (chart) => {
+        chart.data.datasets.forEach((dataset) => {
+          dataset.stepped = true;
+        });
+        chart.update();
+      },
+    },
+    {
+      name: "Step: before",
+      handler: (chart) => {
+        chart.data.datasets.forEach((dataset) => {
+          dataset.stepped = "before";
+        });
+        chart.update();
+      },
+    },
+    {
+      name: "Step: after",
+      handler: (chart) => {
+        chart.data.datasets.forEach((dataset) => {
+          dataset.stepped = "after";
+        });
+        chart.update();
+      },
+    },
+    {
+      name: "Step: middle",
+      handler: (chart) => {
+        chart.data.datasets.forEach((dataset) => {
+          dataset.stepped = "middle";
+        });
+        chart.update();
+      },
+    },
+  ];
+  const myChart1 = new Chart(
+    document.getElementById("myChart1"),
+    config1,
+    actions
+  );
 
-  // graph 2
-    let cosdata2 = [];
-    let ydata2 = [];
-    var amplitude=Math.sqrt(output);
-    console.log(amplitude);
-    for (var i = 0; i <= 4 * Math.PI; i += Math.PI / 4) {
-        cosdata2.push(amplitude * Math.cos(i));
-        var temp = i;
-        ydata2.push(temp.toFixed(2));
-        
-    }
-    
-    const labels2 = ydata2;
-    const data2 = {
-        labels2,
-        datasets: [
-            {     
-                data: cosdata2,
-                label: "Pr v/s time",
-                // fill:true,
-                tension: 0.35,
-            },
-        ],
-    };
-    
-    const config2 = {
-        type: "line",
-        data: data2,
-        options: {
-            radius: 0,
-            responsive: true,
+
+  //graph2
+  let cosdata2 = [];
+  var amplitude = Math.sqrt(output);
+  for (var i = 0; i <= 4 * Math.PI; i += Math.PI / 4) {
+    cosdata2.push(amplitude * Math.cos(i));
+  }
+
+  const data2 = {
+    labels: ydata,
+    datasets: [
+      {
+        label: "Wave",
+        data: cosdata2,
+        tension: 0.4,
+        fill: false,
+        stepped: false,
+      },
+    ],
+  };
+
+  const config2 = {
+    type: "line",
+    data: data2,
+    options: {
+      responsive: true,
+      interaction: {
+        intersect: false,
+        axis: "x",
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: (ctx) =>
+            "Pr vs time",
         },
-    };
-
-    const myChart2 = new Chart(document.querySelector("#myChart2"),config2);
+      },
+    },
+  };
+  const myChart2 = new Chart(
+    document.getElementById("myChart2"),
+    config2,
+    actions
+  );
 }

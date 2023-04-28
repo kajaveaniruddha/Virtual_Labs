@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Input to output waveform</title>
 </head>
 <body>
     <h1>Input to output waveform</h1>
+    <select class="gtype" id="gateType">
+        <option value="none">select gate</option>
+      <option value="and">AND</option>
+      <option value="or">OR</option>
+      <option value="xor">XOR</option>
+      <option value="xnor">XNOR</option>
+      <option value="nand">NAND</option>
+    </select>
+    <select class="numberofip" name="numberofip" id="numip">
+        <option value="0" selected="true">Select number of bits</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+    </select>
+    <br>
+    <br>
+    <div>input1</div>
+    <div class="logicalinputs1"></div>
+      <br>
+      <div>input2</div>
+      <div class="logicalinputs2"></div>
+    <br>
+    <button class="btn" onclick="gateOutput()">Output</button>
+    <input class="op" id="output" readonly />
+    <script src="./input_to_output_waveform.js"></script>
+    
+    <div class="inputchart1" style="width: 500px;"><canvas id="mychart1"></canvas></div>
+    <div class="inputchart2" style="width: 500px;"><canvas id="mychart2"></canvas></div>
+    <div class="outputchart" style="width: 500px;"><canvas id="mychart3"></canvas></div>
 </body>
 </html>
