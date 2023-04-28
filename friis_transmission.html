@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Friis Transmission</title>
 </head>
 <body>
@@ -15,15 +16,27 @@
     <br>
     <br>
     <select title="selector" name="selector" id="selector">
-        <option value="freq" selected>frequency</option>
+        <option value="none" >select option...</option>
+        <option value="freq" >frequency</option>
         <option value="lamb">lambda</option>
     </select>
-    <input type="number" id="frequency" placeholder="frequency" />
-    <input type="number" id="lambda" placeholder="lambda" />
+    <input type="number" id="frequency" placeholder="frequency" disabled="true"/>
+    <input type="number" id="lambda" placeholder="lambda" disabled="true"/>
     <br>
     <br>
     <button type="submit" onclick="calc()" id="calculate">calulate</button>
     <input type="number" id="answer" placeholder="output" readonly />
+
+    <br>
+    <br>
+    
+    <div class="mychartclass" style="width: 500px">
+       <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="mychartclass" style="width: 500px">
+      <canvas id="myChart2"></canvas>
+    </div>
 </body>
 <script src="./friis_transmission.js"></script>
 </html>
