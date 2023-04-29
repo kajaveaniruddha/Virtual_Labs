@@ -1,0 +1,45 @@
+body {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #50c645be, #b3bec1be);
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+}
+
+.home h1 {
+    color: brown;
+    font-size: 50px;
+}
+
+.input {
+    align-items: center;
+    padding: 80px 50px 20px 20px;
+    width: 50%;
+}
+
+.output {
+    width: 50%
+}
+
+.amplitude, .phase, .time, .lambda {
+   text-align: center;
+    margin: 5px 5px 5px 5px;
+    padding: 6px 10px 10px 7px;
+    border: 4px double  rgb(192, 24, 24);
+    font-size: 20px;
+    color: blueviolet;
+    font-weight: 600;
+}
+
+.abc, .answer{
+    margin: 10px 10px 10px 10px;
+    padding: 6px 10px 10px 7px;
+    border: 4px double  rgb(32, 24, 192);
+    font-size: 20px;
+    color: rgb(226, 43, 76);
+}

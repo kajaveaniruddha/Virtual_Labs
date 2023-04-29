@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Group2</title>
-  </head>
-  <body>
-    <h1>Group2</h1>
-    <ul>
-      <li>
-        <a href="./friis_transmission.html">friis_transmission</a>
-      </li>
-      <li>
-        <a href="./input_to_output_waveform.html">input_to_output_waveform</a>
-      </li>
-      <li>
-        <a href="./space_time_signal.html">space_time_signal</a>
-      </li>
-      <li>
-        <a href="./truth_table.html">truth_table</a>
-      </li>
-    </ul>
-  </body>
-</html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="stylesheet" href="homepage.css" />
+</head>
+
+<body>
+  <div class="Home">
+    <a href="COA.pdf" target="_blank" class="about" rel="help">About</a>
+    
+    <div class="description">
+      <h2>2021 batch</h2>
+      Welcome to IIITV-ICD student's site! We are pleased to introduce our project which consists of Friis Transmission,Space Time signal and Logic gates.
+      <br>For more details click on the given below button.
+      <br>Thank you for your interest.
+    </div>
+
+    <div class="slider">
+      <a href="#slide-1">1</a>
+      <a href="#slide-2">2</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-4">4</a>
+      <div class="slides">
+        <div class="slide" id="slide-1">
+          <a href="./friis_transmission.html">
+            <div class="content-overlay"></div><img class="slidePhoto" src="images/friis.jpg" alt="friis photo">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Friis Transmission</h3>
+              <p class="content-text">Received power in free space and plot transmitting and receiving signal.</p>
+            </div>
+          </a>
+        </div>
+        <div class="slide" id="slide-2">
+          <a href="./input_to_output_waveform.html"><img class="slidePhoto" src="images/signal.jpeg" alt="space-signal">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Input to Output Signal</h3>
+              <p class="content-text">Converts input signal to Output signal</p>
+            </div>
+          </a>
+        </div>
+        <div class="slide" id="slide-3">
+          <a href="./space_time_signal.html"><img class="slidePhoto" src="images/space.jpg" alt="friis photo">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Space time signal</h3>
+              <p class="content-text">Generate wave equation and plot the equation</p>
+            </div>
+          </a>
+        </div>
+        <div class="slide" id="slide-4">
+          <a href="./truth_table.html"><img class="slidePhoto" src="images/signal2.jpeg" alt="friis photo">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Logic gate</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>

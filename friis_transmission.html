@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/introjs.min.css"/>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/intro.js"></script>
 
     <title>Friis Transmission</title>
@@ -15,15 +16,59 @@
 .customTooltip *{
   color: #006d0b;
   font-size: 18px;
-  /* background-color: #3e3e3e; */
+  /* opacity: 0.8; */
 }
 
 .customTooltip .introjs-tooltip-title {
   color: #ff1313;
 }
+body{
+background: linear-gradient(to right, #9b45c6bc, #1dc365be);
+font-family: 'Ropa Sans', sans-serif;
+}
+.home {
+    display: flex;
+    flex-direction: row;
+}
+
+.home h1 {
+    color: brown;
+    font-size: 50px;
+}
+
+.input {
+    align-items: center;
+    padding: 105px 100px 200px 105px;
+    width: 100%;
+}
+
+.output {
+    padding: 105px 100px 200px 105px;
+    width: 50%
+}
+
+#Pt, #Gt,#Gr, #distance {
+    margin: 10px 10px 10px 10px;
+    padding: 6px 10px 10px 7px;
+    border: 4px ridge rosybrown;
+    font-size: 20px;
+    color: blueviolet;
+    font-weight: 600;
+    border-radius: 10%;
+}
+#calculate, #answer,#selector, #distance, #frequency,#lambda {
+    margin: 10px 10px 10px 10px;
+    padding: 6px 10px 10px 7px;
+    border: 2px double rosybrown;
+    font-size: 20px;
+    color: rgb(14, 13, 14);
+    font-weight: 600;
+}
 </style>
 
 <body>
+  <div class="home">
+    <div class="input">
     <h1>Friis transmission</h1>
     <input type="number" id="Pt" placeholder="Pt" />
     <input type="number" id="Gt" placeholder="Gt" />
@@ -45,7 +90,8 @@
 
     <br>
     <br>
-    
+  </div>
+  <div class="output">
     <div class="mychartclass" style="width: 500px">
        <canvas id="myChart1"></canvas>
     </div>
@@ -53,7 +99,8 @@
     <div class="mychartclass" style="width: 500px">
       <canvas id="myChart2"></canvas>
     </div>
-    
+  </div>
+</div>
     <script src="./friis_transmission.js"></script>
   </body>
     

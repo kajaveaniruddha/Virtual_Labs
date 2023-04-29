@@ -38,7 +38,7 @@ function calc() {
     data: data,
     options: {
       radius: 0,
-      responsive: true,
+      responsive: false,
     },
   };
 
