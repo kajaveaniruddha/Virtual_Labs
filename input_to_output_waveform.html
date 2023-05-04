@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="inputTOoutput.css" />
     <title>Input to output waveform</title>
 </head>
 <body>
+  <section class="home">
+  <div class="'input">
     <h1>Input to output waveform</h1>
     <select class="gtype" id="gateType">
-        <option value="none">select gate</option>
+        <option value="none">SELECT GATE</option>
       <option value="and">AND</option>
       <option value="or">OR</option>
       <option value="xor">XOR</option>
@@ -38,18 +41,21 @@
     </select>
     <br>
     <br>
-    <div>input1</div>
+    <div class="take">Input1</div>
     <div class="logicalinputs1"></div>
       <br>
-      <div>input2</div>
+      <div class="take">Input2</div>
       <div class="logicalinputs2"></div>
     <br>
     <button class="btn" onclick="gateOutput()">Output</button>
     <input class="op" id="output" readonly />
     <script src="./input_to_output_waveform.js"></script>
-    
-    <div class="inputchart1" style="width: 500px;"><canvas id="mychart1"></canvas></div>
+  </div>
+  <div class="output">
+    <div class="inputchart1" style="width: 500px ;"><canvas id="mychart1"></canvas></div>
     <div class="inputchart2" style="width: 500px;"><canvas id="mychart2"></canvas></div>
     <div class="outputchart" style="width: 500px;"><canvas id="mychart3"></canvas></div>
+  </div>
+</section>
 </body>
 </html>

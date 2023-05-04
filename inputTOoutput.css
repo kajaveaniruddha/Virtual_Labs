@@ -1,0 +1,52 @@
+body {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #45acc6be, #b3bec1be);
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+}
+
+.home h1 {
+    color: brown;
+    font-size: 40px;
+}
+
+.input {
+    align-items: center;
+    padding: 105px 100px 200px 105px;
+    width: 100%;
+}
+
+.output {
+    padding: 105px 100px 200px 105px;
+    width: 50%
+}
+
+.gtype,
+.numberofip,
+.btn,.op {
+    margin: 10px 10px 10px 10px;
+    padding: 6px 10px 10px 7px;
+    border: 4px ridge rosybrown;
+    font-size: 20px;
+    color: blueviolet;
+    font-weight: 600;
+    border-radius: 10%;
+}
+.logicalinputs1, .logicalinputs2{
+    display: inline;
+    color: black;
+    margin: 20px 20px 20px 20px;
+    border: 2px solid rgb(20, 19, 19);
+}
+.take{
+    font-size: 20px;
+    margin: 10px 10px 10px 10px;
+    color: rgb(12, 11, 12);
+    font-weight: 600; 
+}

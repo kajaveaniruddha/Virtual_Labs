@@ -102,7 +102,7 @@ function gateOutput() {
     type: "line",
     data:data1,
     options: {
-      responsive: true,
+      responsive: false,
       interaction: {
         intersect: false,
         axis: "x",
@@ -190,7 +190,7 @@ function gateOutput() {
       type: "line",
       data:data2,
       options: {
-        responsive: true,
+        responsive: false,
         interaction: {
           intersect: false,
           axis: "x",
@@ -277,7 +277,7 @@ function gateOutput() {
     type: "line",
     data:data3,
     options: {
-      responsive: true,
+      responsive: false,
       interaction: {
         intersect: false,
         axis: "x",

@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #9045c6be, #39dad2c9);
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+ h1 {
+    color: rgb(165, 89, 42);
+    font-size: 50px;
+}
+.numberofip , .logicalinputs , .gtype{
+    display: inline-block;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    padding: 6px 10px 10px 7px;
+    border: 2px dashed  rgb(24, 32, 192);
+    font-size: 20px;
+    color: rgb(34, 32, 35);
+    font-weight: 600;
+}
+
+.btn, .op{
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    padding: 6px 10px 10px 7px;
+    border: 2px dashed  rgb(24, 32, 192);
+    font-size: 20px;
+    color: rgb(34, 32, 35);
+    font-weight: 600;  
+}

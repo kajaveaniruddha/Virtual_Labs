@@ -74,7 +74,7 @@ function calc() {
     type: "line",
     data: data1,
     options: {
-      responsive: true,
+      responsive: false,
       interaction: {
         intersect: false,
         axis: "x",
@@ -167,7 +167,7 @@ function calc() {
     type: "line",
     data: data2,
     options: {
-      responsive: true,
+      responsive: false,
       interaction: {
         intersect: false,
         axis: "x",
